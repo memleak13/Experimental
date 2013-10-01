@@ -1,0 +1,7 @@
+$def with (f1)
+
+<html>
+	<form method="post">
+		$:f1.render()
+	</form>
+</html>
