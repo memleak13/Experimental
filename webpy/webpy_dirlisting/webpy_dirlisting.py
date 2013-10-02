@@ -3,10 +3,11 @@ import os
 import web
 
 #Important: 
-#Template Files need to end with .html !!!!
-#App needs to be run with full path: 
-#/Users/business/Desktop/Git/Experimental/bpy/webpy_dirlisting/webpy_dirlisting.py 
+# 1. Template Files need to end with .html !!!!
+# 2.App needs to be run with full path from the dir containing the script: 
+#/Users/business/Desktop/Git/Experimental/webpy/webpy_dirlisting/webpy_dirlisting.py 
 
+#Getting dir listing, duplicating each entry and adding as tupple to a list
 files = os.listdir('./')
 dd_values = []
 for entry in files:
@@ -16,7 +17,8 @@ for entry in files:
 render = web.template.render('templates/')
 urls = ('/', 'index',)
 myform = web.form.Form(
-	#web.form.Dropdown('source', [('value1', 'description1'), ('value2', 'description2')]),
+	#web.form.Dropdown('source', [('value1', 'description1'), 
+	#	('value2', 'description2')]),
 	web.form.Dropdown('source', dd_values),
 	web.form.Dropdown('target', dd_values),
 	web.form.Button('compare')

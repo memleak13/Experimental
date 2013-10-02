@@ -1,0 +1,23 @@
+$def with (f1,f2,title)
+
+<html>
+Hello $title
+<form method="post">
+	$:f1.render()
+</form>	
+<form method="post">
+	$:f2.render()
+</form>
+<br>
+<br>
+<form method="post">
+	<table>
+	<tr>
+	<td>$:f1.render()</td>
+	<td>$:f2.render()</td>
+	</tr>
+	</table>
+</form>
+
+
+</html>
