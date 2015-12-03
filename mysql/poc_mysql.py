@@ -1,11 +1,14 @@
 """mysql connection poc
 
+    https://pypi.python.org/pypi/PyMySQL
+
     Simple poc using mysql in python.
     MySQL runs on localhost, it seems on OSX by default on port 3307, not 3306
 
     TODO:   Check advantage of autocommit=False
             (It might make sense to set autocommit to false and then use
             conn.commit() if one has multiple entries.)
+    TODO:   Exception Handling
 
 """
 import pymysql
